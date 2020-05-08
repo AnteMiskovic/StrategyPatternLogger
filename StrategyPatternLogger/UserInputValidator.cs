@@ -9,7 +9,7 @@ namespace StrategyPatternLogger
     internal static class UserInputValidator
     {
         
-       public static Calculator ValidateLoggerInput()
+       public static Calculator ValidateLoggerInput() //Validates user's input and returns a concrete Calculator object with defined behavior.
         {
             int number = 0;
                 do
@@ -34,8 +34,8 @@ namespace StrategyPatternLogger
                 } while (number == 0);
 
             return number == 1 ? new Calculator(new ConsoleLog()) : new Calculator(new FileLog());
-        } //Validates user's input and returns a concrete Calculator object with defined behavior.
-       public static double ValidateOperand()
+        } 
+       public static double ValidateOperand()// Validates user's input and returns legit operand (double) for further operations.
         {
             bool isReady = false;
             double d;
@@ -53,7 +53,7 @@ namespace StrategyPatternLogger
 
             return d;
 
-        }// Validates user's input and returns legit operand (double) for further operations.
+        }
 
     }
 }
